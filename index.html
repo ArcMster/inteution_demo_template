@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>inTEUtion — Event Based Accounting ERP for NVOCCs</title>
+  <title>in <span>TEUtion — Event Based Accounting ERP for NVOCCs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
   <style>
     :root {
       --navy: #1322a8;
@@ -59,6 +62,7 @@
       padding: 24px;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 12px;
       font-family: 'Sora', sans-serif;
       font-weight: 800;
@@ -66,26 +70,11 @@
       border-bottom: 1px solid var(--line);
     }
 
-    .brand .logo-mark {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, var(--cobalt), var(--navy));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      box-shadow: 0 8px 16px -6px rgba(19, 34, 168, 0.5);
-    }
-
-    .brand .logo-mark svg {
-      width: 22px;
-      height: 22px;
-    }
-
-    .brand .teu {
-      color: var(--navy);
-      font-weight: 800;
+    .brand img {
+      max-height: 40px;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
     }
 
     .nav-links {
@@ -168,8 +157,15 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Vision Dashboard Custom Layout */
@@ -303,7 +299,7 @@
       height: 180px;
       top: -30px;
       right: -30px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.02) 100%);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.02) 100%);
     }
 
     .diamond-2 {
@@ -349,7 +345,9 @@
     }
 
     @keyframes spinDashed {
-      100% { transform: rotate(360deg); }
+      100% {
+        transform: rotate(360deg);
+      }
     }
 
     .ship-silhouette svg {
@@ -359,7 +357,9 @@
     }
 
     @keyframes counterSpin {
-      100% { transform: rotate(-360deg); }
+      100% {
+        transform: rotate(-360deg);
+      }
     }
 
     /* Modules Section styling */
@@ -613,7 +613,8 @@
       letter-spacing: 0.5px;
     }
 
-    .param-group select, .param-group input {
+    .param-group select,
+    .param-group input {
       padding: 10px;
       border-radius: 8px;
       border: 1px solid var(--line);
@@ -743,7 +744,8 @@
       width: 195px;
       min-height: 200px;
       padding: 18px;
-      background: #fef08a; /* Soft bright yellow sticky */
+      background: #fef08a;
+      /* Soft bright yellow sticky */
       border-radius: 2px;
       box-shadow: 0 10px 20px -8px rgba(120, 90, 0, 0.35);
       transform: rotate(var(--rot, -2deg));
@@ -763,16 +765,24 @@
       height: 18px;
       background: rgba(255, 255, 255, 0.45);
       transform: rotate(-1deg);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     }
 
     .sticky-note.cost {
-      background: #fde047; /* Slightly darker gold yellow for cost */
+      background: #fde047;
+      /* Slightly darker gold yellow for cost */
     }
 
     @keyframes dropIn {
-      from { transform: translateY(-50px) rotate(15deg); opacity: 0; }
-      to { transform: translateY(0) rotate(var(--rot, -2deg)); opacity: 1; }
+      from {
+        transform: translateY(-50px) rotate(15deg);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0) rotate(var(--rot, -2deg));
+        opacity: 1;
+      }
     }
 
     .sticky-type {
@@ -1154,42 +1164,62 @@
     }
 
     @keyframes pulseGreen {
-      0% { transform: scale(0.9); opacity: 0.7; }
-      50% { transform: scale(1.1); opacity: 1; }
-      100% { transform: scale(0.9); opacity: 0.7; }
+      0% {
+        transform: scale(0.9);
+        opacity: 0.7;
+      }
+
+      50% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(0.9);
+        opacity: 0.7;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Left Sidebar Brand and Tabs -->
   <aside class="sidebar">
     <div class="brand">
-      <div class="logo-mark">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M3 17l9 4 9-4M3 12l9 4 9-4M12 3L3 7l9 4 9-4-9-4z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
-      </div>
-      <span>in<span class="teu">TEUtion</span></span>
+      <img src="assets/logo.png" alt="inTEUtion Logo">
     </div>
-    
+
     <nav class="nav-links">
       <button class="nav-item active" onclick="switchTab('vision', this)">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
         Vision &amp; Core Idea
       </button>
       <button class="nav-item" onclick="switchTab('modules', this)">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+        </svg>
         9 Platform Modules
       </button>
       <button class="nav-item" onclick="switchTab('engine', this)">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26(1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26(1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+        </svg>
         Move &amp; Tariff Engine
       </button>
       <button class="nav-item" onclick="switchTab('workflows', this)">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+        </svg>
         Operational Workflows
       </button>
     </nav>
-    
+
     <div class="sidebar-footer">
       <div><strong>inTEUtion ERP v2.5</strong></div>
       <div>Interactive Pitch Walkthrough</div>
@@ -1204,12 +1234,14 @@
       <div class="vision-layout">
         <div class="hero-content">
           <h2>Event Based Accounting ERP for NVOCCs</h2>
-          <h1>inTEUtion</h1>
+          <h1>in<span style="color:#1322a8;">TEU</span>tion</h1>
           <p>
-            An ERP engineered for modern container shipping lines and Non-Vessel Operating Common Carriers.
-            Instead of manual invoicing and fragile tracking, <strong>every container movement</strong> (such as Dispatch to Shipper, Port Gate-In, or On-Board) triggers mapped cost and revenue elements, resolving tariffs automatically.
+            Next-gen ERP built For NVOCC operations — sleek, smart, and built for the new age of logistics..
+            Instead of manual invoicing and fragile tracking, <strong>every container movement</strong> (such as
+            Dispatch to Shipper, Port Gate-In, or On-Board) triggers mapped cost and revenue elements, resolving tariffs
+            automatically.
           </p>
-          
+
           <div class="badge-grid">
             <div class="badge-card">
               <div class="badge-icon">100%</div>
@@ -1243,7 +1275,10 @@
 
           <button class="action-btn" onclick="document.querySelector('[onclick*=\'modules\']').click()">
             Explore the Core Modules
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
           </button>
         </div>
 
@@ -1253,10 +1288,14 @@
           <div class="diamond-shape diamond-3"></div>
           <div class="graphic-center">
             <div class="ship-silhouette">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 17h20l-2.5 4h-15L2 17zM5 17V9a3 3 0 013-3h8a3 3 0 013 3v8" /><path d="M9 6V3h6v3" /></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M2 17h20l-2.5 4h-15L2 17zM5 17V9a3 3 0 013-3h8a3 3 0 013 3v8" />
+                <path d="M9 6V3h6v3" />
+              </svg>
             </div>
             <h3 style="font-family:'Sora'; font-weight:800; font-size:24px; margin-bottom:6px;">Event × Element</h3>
-            <p style="opacity:0.8; font-size:14px; max-width:280px; margin: 0 auto;">One physical movement automatically triggers all relevant accounting lines.</p>
+            <p style="opacity:0.8; font-size:14px; max-width:280px; margin: 0 auto;">One physical movement automatically
+              triggers all relevant accounting lines.</p>
           </div>
         </div>
       </div>
@@ -1285,7 +1324,9 @@
     <section id="engine" class="tab-view">
       <div class="engine-header">
         <h2>The Event &amp; Tariff Accrual Engine</h2>
-        <p>Configure shipping parameters, then click the physical move codes below to simulate automatic tariff provisioning. Tariffs are always triggered instantly on move code updation, establishing a real-time accrual which is actuated during final invoicing, payment, or settlement.</p>
+        <p>Configure shipping parameters, then click the physical move codes below to simulate automatic tariff
+          provisioning. Tariffs are always triggered instantly on move code updation, establishing a real-time accrual
+          which is actuated during final invoicing, payment, or settlement.</p>
       </div>
 
       <!-- Live parameters driving tariff calculations -->
@@ -1324,36 +1365,49 @@
         <div class="param-group">
           <label>Dispatch ➔ Gate-In Days (ADFE Surcharge)</label>
           <div style="display: flex; align-items: center; gap: 10px;">
-            <input type="range" id="daysADFE" min="1" max="15" value="3" oninput="updateDaysLabel('labelADFE', this.value); recalculateCurrentMove();" style="flex-grow:1;">
-            <span id="labelADFE" style="font-weight: 800; min-width: 55px; text-align: right; font-size:13px; color:var(--navy);">3 Days</span>
+            <input type="range" id="daysADFE" min="1" max="15" value="3"
+              oninput="updateDaysLabel('labelADFE', this.value); recalculateCurrentMove();" style="flex-grow:1;">
+            <span id="labelADFE"
+              style="font-weight: 800; min-width: 55px; text-align: right; font-size:13px; color:var(--navy);">3
+              Days</span>
           </div>
         </div>
         <div class="param-group">
           <label>Gate-In ➔ On-Board Days (Port Export POSE)</label>
           <div style="display: flex; align-items: center; gap: 10px;">
-            <input type="range" id="daysPOSE" min="1" max="15" value="4" oninput="updateDaysLabel('labelPOSE', this.value); recalculateCurrentMove();" style="flex-grow:1;">
-            <span id="labelPOSE" style="font-weight: 800; min-width: 55px; text-align: right; font-size:13px; color:var(--navy);">4 Days</span>
+            <input type="range" id="daysPOSE" min="1" max="15" value="4"
+              oninput="updateDaysLabel('labelPOSE', this.value); recalculateCurrentMove();" style="flex-grow:1;">
+            <span id="labelPOSE"
+              style="font-weight: 800; min-width: 55px; text-align: right; font-size:13px; color:var(--navy);">4
+              Days</span>
           </div>
         </div>
         <div class="param-group">
           <label>Discharge ➔ Dispatch Days (Port Import POSI)</label>
           <div style="display: flex; align-items: center; gap: 10px;">
-            <input type="range" id="daysPOSI" min="1" max="15" value="3" oninput="updateDaysLabel('labelPOSI', this.value); recalculateCurrentMove();" style="flex-grow:1;">
-            <span id="labelPOSI" style="font-weight: 800; min-width: 55px; text-align: right; font-size:13px; color:var(--navy);">3 Days</span>
+            <input type="range" id="daysPOSI" min="1" max="15" value="3"
+              oninput="updateDaysLabel('labelPOSI', this.value); recalculateCurrentMove();" style="flex-grow:1;">
+            <span id="labelPOSI"
+              style="font-weight: 800; min-width: 55px; text-align: right; font-size:13px; color:var(--navy);">3
+              Days</span>
           </div>
         </div>
         <div class="param-group">
           <label>Discharge ➔ Empty Return Days (Detention DET)</label>
           <div style="display: flex; align-items: center; gap: 10px;">
-            <input type="range" id="daysDET" min="1" max="25" value="6" oninput="updateDaysLabel('labelDET', this.value); recalculateCurrentMove();" style="flex-grow:1;">
-            <span id="labelDET" style="font-weight: 800; min-width: 55px; text-align: right; font-size:13px; color:var(--navy);">6 Days</span>
+            <input type="range" id="daysDET" min="1" max="25" value="6"
+              oninput="updateDaysLabel('labelDET', this.value); recalculateCurrentMove();" style="flex-grow:1;">
+            <span id="labelDET"
+              style="font-weight: 800; min-width: 55px; text-align: right; font-size:13px; color:var(--navy);">6
+              Days</span>
           </div>
         </div>
       </div>
 
       <!-- Visual timeline inspired by move_code_element_mappings.jpeg -->
       <div class="timeline-container">
-        <div style="font-family:'Sora'; font-size:13px; font-weight:800; color:var(--cobalt); margin-bottom:20px; display:flex; align-items:center;">
+        <div
+          style="font-family:'Sora'; font-size:13px; font-weight:800; color:var(--cobalt); margin-bottom:20px; display:flex; align-items:center;">
           <span class="live-accent"></span> PHYSICAL CONTAINER CONTAINER LIFECYCLE
         </div>
         <div class="timeline-track" id="timelineTrack">
@@ -1405,8 +1459,10 @@
       </div>
 
       <div class="flow-selector-tabs">
-        <button class="flow-tab-btn active" id="exportFlowBtn" onclick="toggleWorkflowMode('export')">Export Operational Flow (16 Steps)</button>
-        <button class="flow-tab-btn" id="importFlowBtn" onclick="toggleWorkflowMode('import')">Import, MNR &amp; Accounting Lanes</button>
+        <button class="flow-tab-btn active" id="exportFlowBtn" onclick="toggleWorkflowMode('export')">Export Operational
+          Flow (16 Steps)</button>
+        <button class="flow-tab-btn" id="importFlowBtn" onclick="toggleWorkflowMode('import')">Import, MNR &amp;
+          Accounting Lanes</button>
       </div>
 
       <!-- Export Mode Workspace -->
@@ -1427,7 +1483,12 @@
           <!-- Operational Lane -->
           <div class="lane-group">
             <div class="lane-title">
-              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" /></svg>
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+              </svg>
               Import Operational Lane
             </div>
             <div class="lane-flow">
@@ -1453,7 +1514,10 @@
           <!-- Accounting Lane -->
           <div class="lane-group">
             <div class="lane-title">
-              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
               Accounting Lane
             </div>
             <div class="lane-flow">
@@ -1475,7 +1539,12 @@
           <!-- CMNR Repair Lane -->
           <div class="lane-group">
             <div class="lane-title">
-              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
               CMNR Repair Lane
             </div>
             <div class="lane-flow">
@@ -1528,7 +1597,7 @@
         container.style.gap = '10px';
         document.body.appendChild(container);
       }
-      
+
       var toast = document.createElement('div');
       toast.style.background = type === 'success' ? 'var(--green)' : 'var(--navy)';
       toast.style.color = 'white';
@@ -1543,7 +1612,7 @@
       toast.style.transition = 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
       toast.style.opacity = '0';
       toast.style.transform = 'translateY(30px)';
-      
+
       toast.innerHTML = `
         <div style="font-family:'Sora', sans-serif; font-weight:800; font-size:12px; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px; display:flex; align-items:center; gap:6px;">
           <span style="width:6px; height:6px; border-radius:50%; background:white; display:inline-block; animation: pulseGreen 1.5s infinite;"></span>
@@ -1551,14 +1620,14 @@
         </div>
         <div>${message}</div>
       `;
-      
+
       container.appendChild(toast);
-      
+
       setTimeout(() => {
         toast.style.opacity = '1';
         toast.style.transform = 'translateY(0)';
       }, 50);
-      
+
       setTimeout(() => {
         toast.style.opacity = '0';
         toast.style.transform = 'translateY(-20px)';
@@ -1797,10 +1866,10 @@
 
     // Application State variables
     var activeTabId = 'vision';
-    var selectedModuleCode = 'CORE'; 
+    var selectedModuleCode = 'CORE';
     var currentWorkflowMode = 'export';
     var activeTimelineNodeIdx = 0;
-    var provisionedAccruals = []; 
+    var provisionedAccruals = [];
 
     // Custom Live CMNR State
     var selectFace = 'Roof';
@@ -1810,7 +1879,7 @@
 
     // Premium Agency Sandbox State
     var agySettleDays = 40;
-    var agyCalculationMode = 'element'; 
+    var agyCalculationMode = 'element';
 
     // Slot Capacity Custom Sandbox State
     var slotUtilization = 75;
@@ -1821,9 +1890,9 @@
     var emsActiveYard = 'INCOK_COCHIN_YARD_1';
 
     // Core Init Function
-    window.onload = function() {
+    window.onload = function () {
       renderModulesGrid();
-      selectModule('CORE'); 
+      selectModule('CORE');
       renderTimeline();
       recalculateCurrentMove();
       generateExportWorkflowSteps();
@@ -1836,7 +1905,7 @@
       activeTabId = tabId;
       document.querySelectorAll('.tab-view').forEach(view => view.classList.remove('active'));
       document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
-      
+
       document.getElementById(tabId).classList.add('active');
       el.classList.add('active');
     }
@@ -1857,7 +1926,7 @@
 
     function selectModule(code, cardEl = null) {
       selectedModuleCode = code;
-      
+
       document.querySelectorAll('.module-card').forEach(card => card.classList.remove('active-card'));
       if (cardEl) {
         cardEl.classList.add('active-card');
@@ -2185,9 +2254,9 @@
       slotUtilization = parseInt(val);
       var label = document.getElementById('slotPercentLabel');
       var alertCont = document.getElementById('slotAlertContainer');
-      
+
       if (label) label.textContent = `${slotUtilization}% Utilised`;
-      
+
       if (alertCont) {
         if (slotUtilization > 100) {
           alertCont.style.background = '#fee2e2';
@@ -2211,12 +2280,12 @@
       var vendor = document.getElementById('slotVendorSel').value;
       var contract = document.getElementById('slotContractSel').value;
       var statusTitle = document.getElementById('slotStatusTitle');
-      
+
       if (statusTitle) {
         var vendorName = "Maersk Line";
         if (vendor === 'CMA') vendorName = "CMA CGM";
         if (vendor === 'MSC') vendorName = "MSC Charter";
-        
+
         statusTitle.textContent = `${vendorName} (${contract})`;
       }
     }
@@ -2286,8 +2355,8 @@
 
     function updateAgencyDashboard() {
       var numContainers = Math.round(agySettleDays * 0.45) + 3;
-      var totalCollections = numContainers * 1820; 
-      var totalPayments = numContainers * 380;     
+      var totalCollections = numContainers * 1820;
+      var totalPayments = numContainers * 380;
 
       var commission = 0;
       var commissionTypeLog = '';
@@ -2307,10 +2376,10 @@
       var netDueEl = document.getElementById('agyNetDue');
       var auditEl = document.getElementById('agyAuditTrail');
 
-      if (collectedEl) collectedEl.textContent = `$${totalCollections.toLocaleString('en-US', {minimumFractionDigits: 2})}`;
-      if (paidEl) paidEl.textContent = `$${totalPayments.toLocaleString('en-US', {minimumFractionDigits: 2})}`;
-      if (commEl) commEl.textContent = `$${commission.toLocaleString('en-US', {minimumFractionDigits: 2})}`;
-      if (netDueEl) netDueEl.textContent = `$${netToRemit.toLocaleString('en-US', {minimumFractionDigits: 2})}`;
+      if (collectedEl) collectedEl.textContent = `$${totalCollections.toLocaleString('en-US', { minimumFractionDigits: 2 })}`;
+      if (paidEl) paidEl.textContent = `$${totalPayments.toLocaleString('en-US', { minimumFractionDigits: 2 })}`;
+      if (commEl) commEl.textContent = `$${commission.toLocaleString('en-US', { minimumFractionDigits: 2 })}`;
+      if (netDueEl) netDueEl.textContent = `$${netToRemit.toLocaleString('en-US', { minimumFractionDigits: 2 })}`;
 
       if (auditEl) {
         auditEl.innerHTML = `
@@ -2318,14 +2387,14 @@
           <div>[DATA] Scanned ${numContainers} physical containers within ${agySettleDays}-days range</div>
           <div>[INFO] Checked local THC-C vs carrier manifests: 100% OK</div>
           <div>[TRUST] Mapping commission via: ${commissionTypeLog}</div>
-          <div style="color:#10b981;">[STATUS] Verified trust mapping. Net remittance to line: $${netToRemit.toLocaleString('en-US', {minimumFractionDigits: 2})} with zero leakage.</div>
+          <div style="color:#10b981;">[STATUS] Verified trust mapping. Net remittance to line: $${netToRemit.toLocaleString('en-US', { minimumFractionDigits: 2 })} with zero leakage.</div>
         `;
       }
     }
 
     function executeAgencySettle() {
       showToast(
-        "Settlement Reconciled", 
+        "Settlement Reconciled",
         `Accrued agent commissions and collections finalized for the ${agySettleDays}-day window. Provisioned accruals successfully actuated.`,
         "success"
       );
@@ -2370,7 +2439,7 @@
 
       for (var mIdx = 0; mIdx <= activeTimelineNodeIdx; mIdx++) {
         var move = MOVES_DATA[mIdx];
-        
+
         move.elements.forEach((elem) => {
           var amount = 0;
           var tariffBasis = '';
@@ -2490,7 +2559,7 @@
     // Tab 4: Operational Workflows Code
     function toggleWorkflowMode(mode) {
       currentWorkflowMode = mode;
-      
+
       var expBtn = document.getElementById('exportFlowBtn');
       var impBtn = document.getElementById('importFlowBtn');
       var expWrapper = document.getElementById('exportWorkflowWrapper');
@@ -2656,4 +2725,5 @@
     }
   </script>
 </body>
+
 </html>
