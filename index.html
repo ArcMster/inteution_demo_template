@@ -1679,19 +1679,25 @@
               automatically based on event updates.</div>
           </div>
 
-          <!-- Card 2: Demurrage & Detention -->
-          <div class="capability-card"
-            onclick="switchTab('modules', document.querySelector('[onclick*=\'modules\']')); selectModule('CMNR');">
+          <!-- Card 2: Move-Based Tariffs & Demurrage -->
+          <div class="capability-card" onclick="switchTab('engine', document.querySelector('[onclick*=\'engine\']'))">
             <div class="capability-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
                 <polyline points="12 6 12 12 16 14"></polyline>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="M4.93 4.93l1.41 1.41"></path>
+                <path d="M17.66 17.66l1.41 1.41"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="M6.34 17.66l-1.41 1.41"></path>
+                <path d="M19.07 4.93l-1.41 1.41"></path>
               </svg>
             </div>
-            <div class="capability-title">Demurrage &amp; Detention</div>
-            <div class="capability-desc">Automated temporal container custody tracking across global ports and depots to
-              eliminate cost leakages.</div>
+            <div class="capability-title">Move-Based Tariffs &amp; Demurrage</div>
+            <div class="capability-desc">Automatically provisions shipping rates, local port surcharges, and temporal container demurrages/detentions the moment a move is updated, ensuring zero unbilled leakage.</div>
           </div>
 
           <!-- Card 3: Visibility Dashboards -->
@@ -1740,34 +1746,6 @@
             <div class="capability-title">Job-Level Profitability</div>
             <div class="capability-desc">Granular real-time accounting and provisional margin tracking mapping actual vs
               estimated costs per unit booking.</div>
-          </div>
-
-          <!-- Card 6: No Revenue Leakage -->
-          <div class="capability-card"
-            onclick="switchTab('modules', document.querySelector('[onclick*=\'modules\']')); selectModule('ACC');">
-            <div class="capability-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-              </svg>
-            </div>
-            <div class="capability-title">No Revenue Leakage</div>
-            <div class="capability-desc">Automatically provisions costs and revenues in real-time at the exact moment a
-              container move is updated, leaving zero room for unbilled services or human error.</div>
-          </div>
-
-          <!-- Card 7: Move-Based Tariffs -->
-          <div class="capability-card" onclick="switchTab('engine', document.querySelector('[onclick*=\'engine\']'))">
-            <div class="capability-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-              </svg>
-            </div>
-            <div class="capability-title">Move-Based Tariffs</div>
-            <div class="capability-desc">Shipping rates and local port surcharges link directly to physical container
-              milestones (such as empty release, gate-in, or vessel load) to trigger calculations instantly.</div>
           </div>
           <!-- Card 8: Agency Settlement -->
           <div class="capability-card"
