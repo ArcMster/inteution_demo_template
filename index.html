@@ -2693,8 +2693,19 @@
               <button class="flow-tab-btn" id="btnEximDaily" style="font-size:11px; padding:8px; text-align:center;" onclick="toggleEximReport('daily')">Daily Activity</button>
             </div>
 
-            <div id="eximReportBox" style="background:var(--white); border-radius:8px; border:1px solid var(--line); padding:12px; font-size:11.5px; min-height:110px;">
+            <div id="eximReportBox" style="background:var(--white); border-radius:8px; border:1px solid var(--line); padding:12px; font-size:11.5px; min-height:110px; margin-bottom:12px;">
               <!-- Dynamic Report Contents -->
+            </div>
+
+            <!-- Moved Documentation Exports -->
+            <div style="font-size:11px; font-weight:800; color:var(--navy); text-transform:uppercase; margin-bottom:8px;">inTEUtion Documentation Exports</div>
+            <p style="font-size:11.5px; color:var(--slate); margin-bottom:10px; line-height:1.4;">Export system manifests for direct integration with third-party networks.</p>
+
+            <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:8px; margin-bottom:12px;">
+              <button class="action-btn" style="padding:8px 10px; font-size:11.5px; justify-content:center; background:var(--white); color:var(--navy-deep); border:1px solid var(--line);" onclick="triggerExport('JSON')">JSON Manifest</button>
+              <button class="action-btn" style="padding:8px 10px; font-size:11.5px; justify-content:center; background:var(--white); color:var(--navy-deep); border:1px solid var(--line);" onclick="triggerExport('EDI')">EDI Exchange</button>
+              <button class="action-btn" style="padding:8px 10px; font-size:11.5px; justify-content:center; background:var(--white); color:var(--navy-deep); border:1px solid var(--line);" onclick="triggerExport('PDF')">PDF Document</button>
+              <button class="action-btn" style="padding:8px 10px; font-size:11.5px; justify-content:center; background:var(--white); color:var(--navy-deep); border:1px solid var(--line);" onclick="triggerExport('Excel')">Excel Sheet</button>
             </div>
 
             <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px; font-size:11px; background:#fff; padding:8px 12px; border-radius:6px; border:1px solid var(--line);">
@@ -2727,21 +2738,33 @@
           </div>
         `;
       } else if (mod.interactiveType === 'insights') {
-        // HIGH-FIDELITY UTILS PANEL WITH DYNAMIC DOWNLOAD EXPORTS & INTEGRATION DETAILS
+        // HIGH-FIDELITY UTILS PANEL WITH DYNAMIC ANALYTICS PLOTS
         interactiveHTML = `
           <div style="background:var(--ice-2); padding:16px; border:1px solid var(--line); border-radius:12px; margin-top:10px;">
-            <div style="font-size:11px; font-weight:800; color:var(--navy); text-transform:uppercase; margin-bottom:10px;">inTEUtion Documentation Exports</div>
-            <p style="font-size:11.5px; color:var(--slate); margin-bottom:10px;">Export system manifests for direct integration with third-party networks.</p>
+            <div style="font-size:11px; font-weight:800; color:var(--navy); text-transform:uppercase; margin-bottom:10px;">Utility Insights &amp; Analytics</div>
+            <p style="font-size:11.5px; color:var(--slate); margin-bottom:12px; line-height:1.4;">Select a segment to pinpoint real-time route profitability and slot optimization trends.</p>
 
-            <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:8px; margin-bottom:12px;">
-              <button class="action-btn" style="padding:8px 10px; font-size:11.5px; justify-content:center; background:var(--white); color:var(--navy-deep); border:1px solid var(--line);" onclick="triggerExport('JSON')">JSON Manifest</button>
-              <button class="action-btn" style="padding:8px 10px; font-size:11.5px; justify-content:center; background:var(--white); color:var(--navy-deep); border:1px solid var(--line);" onclick="triggerExport('EDI')">EDI Exchange</button>
-              <button class="action-btn" style="padding:8px 10px; font-size:11.5px; justify-content:center; background:var(--white); color:var(--navy-deep); border:1px solid var(--line);" onclick="triggerExport('PDF')">PDF Document</button>
-              <button class="action-btn" style="padding:8px 10px; font-size:11.5px; justify-content:center; background:var(--white); color:var(--navy-deep); border:1px solid var(--line);" onclick="triggerExport('Excel')">Excel Sheet</button>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;">
+              <div style="display:flex; flex-direction:column; gap:4px;">
+                <label style="font-size:10px; font-weight:700; color:var(--navy-deep);">Sector</label>
+                <select id="insSectorSel" onchange="runInsightsCalc()" style="padding:6px; font-size:11.5px; border-radius:6px; border:1px solid var(--line); background:#fff; width:100%;">
+                  <option value="IN-ME">India - Middle East</option>
+                  <option value="ME-EU">Middle East - Europe</option>
+                  <option value="IN-EU">India - Europe</option>
+                </select>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:4px;">
+                <label style="font-size:10px; font-weight:700; color:var(--navy-deep);">Time Frame</label>
+                <select id="insTimeSel" onchange="runInsightsCalc()" style="padding:6px; font-size:11.5px; border-radius:6px; border:1px solid var(--line); background:#fff; width:100%;">
+                  <option value="QTD">QTD Performance</option>
+                  <option value="YTD">YTD Performance</option>
+                  <option value="MTD">MTD Performance</option>
+                </select>
+              </div>
             </div>
 
-            <div style="background:var(--white); border-radius:8px; border:1px dashed var(--line); padding:10px; font-size:11px;">
-              <strong>Custom Integrations?</strong> We provide dedicated teams to build API endpoints and secure SFTP structures with your terminal vendors.
+            <div id="insightsCalcBox" style="background:var(--white); border-radius:8px; border:1px solid var(--line); padding:12px; font-size:11.5px; min-height:100px;">
+              <!-- Populated dynamically by JS -->
             </div>
           </div>
         `;
@@ -2767,6 +2790,8 @@
         toggleEximReport('summary');
       } else if (mod.interactiveType === 'fleet') {
         updateEmsSandbox('COCHIN');
+      } else if (mod.interactiveType === 'insights') {
+        runInsightsCalc();
       }
     }
 
@@ -2879,6 +2904,41 @@
         `System successfully compiled manifest and formatted data into a premium ${format} export payload. Download initiated.`,
         "success"
       );
+    }
+
+    // Dynamic Route Profitability & Optimization Calculator for Utility Insights
+    function runInsightsCalc() {
+      var sectorSel = document.getElementById('insSectorSel');
+      var timeSel = document.getElementById('insTimeSel');
+      var box = document.getElementById('insightsCalcBox');
+      if (!sectorSel || !timeSel || !box) return;
+
+      var sector = sectorSel.value;
+      var timeframe = timeSel.value;
+      
+      var margin = "84%";
+      var netProfit = timeframe === 'YTD' ? "$52,080" : (timeframe === 'MTD' ? "$4,340" : "$12,400");
+      var fleetUtil = "92%";
+      var costWaste = "$0";
+      
+      if (sector === 'ME-EU') {
+        margin = "78%";
+        netProfit = timeframe === 'YTD' ? "$79,380" : (timeframe === 'MTD' ? "$6,615" : "$18,900");
+        fleetUtil = "88%";
+        costWaste = timeframe === 'YTD' ? "$1,760" : (timeframe === 'MTD' ? "$150" : "$420");
+      } else if (sector === 'IN-EU') {
+        margin = "85%";
+        netProfit = timeframe === 'YTD' ? "$102,900" : (timeframe === 'MTD' ? "$8,575" : "$24,500");
+        fleetUtil = "95%";
+        costWaste = "$0";
+      }
+      
+      box.innerHTML = `
+        <div style="font-weight:700; color:var(--navy-deep); margin-bottom:6px;">Performance Analytics (${timeframe})</div>
+        <div style="display:flex; justify-content:space-between; margin-bottom:4px;"><span>Route Profitability:</span><strong style="color:var(--green);">${margin} Margin (${netProfit})</strong></div>
+        <div style="display:flex; justify-content:space-between; margin-bottom:4px;"><span>Active Fleet Utilisation:</span><strong>${fleetUtil}</strong></div>
+        <div style="display:flex; justify-content:space-between;"><span>Unallocated Slot Waste:</span><strong style="${costWaste === '$0' ? 'color:var(--slate);' : 'color:var(--rose);'}">${costWaste}</strong></div>
+      `;
     }
 
     function updateSettleWindow(val) {
